@@ -1,0 +1,68 @@
+\documentclass{labart}
+
+\renewcommand{\abstractname}{概要}
+\title{ROP 攻击实验}
+\author{网络与系统安全综合实验}
+\date{实验截止: XXXX.xx.xx 星期X 23:59}
+\labtitle{lab1}
+
+\begin{document}
+
+\maketitle
+
+% 本文件使用XeLaTeX编译生成，确保编译前已安装所需的Package
+
+\begin{abstract}
+本手册主要介绍ROP攻击实验的相关内容，并推荐常用工具及使用方法。
+\end{abstract}
+
+
+\section{实验相关}
+\subsection{实验内容}
+本次实验为网络与系统安全综合实验第一次实验（以下称为Lab1），主要内容是ROP攻击方法的利用。Lab1一共包括四个题目：
+\begin{lstlisting}[numbers=none,frame=none]
+- lab1-1：got hijack
+- lab1-2：rop
+- lab1-3：rop
+- lab1-4：rop
+\end{lstlisting}
+
+\subsection{提交内容}
+Lab1需要提交实验报告(PDF/Word)和每道题目的解题脚本，实验报告需要完整反映题目解答过程和最后的答案，实验报告和解题脚本一同压缩为.zip格式上交。
+
+\begin{lstlisting}[numbers=none,frame=none]
+命名格式:
+压缩包：lab1-学号-姓名.zip                    e.g. lab1-17000000001-张三.zip
+报告：  lab1-学号-姓名.[doc/pdf]              e.g. lab1-17000000001-张三.pdf
+脚本：  lab1-[1-4].[c/py/...]       e.g. lab1-2-17000000001-张三.py
+\end{lstlisting}
+
+
+\section{工具相关}
+\noindent 推荐一些常用的调试/ROP常用工具。
+
+\vspace{0.5cm}
+
+\noindent gdb插件 peda 或者 pwndbg
+
+\begin{lstlisting}[numbers=none,frame=tb, language=bash]
+# peda
+git clone https://github.com/longld/peda.git ~/peda
+echo "source ~/peda/peda.py" >> ~/.gdbinit
+# pwndbg
+git clone https://github.com/pwndbg/pwndbg
+cd pwndbg
+./setup.sh
+\end{lstlisting}
+\vspace{0.5cm}
+\noindent pwntools
+\begin{lstlisting}[numbers=none,frame=tb, language=bash]
+pip install pwntools
+\end{lstlisting}
+\vspace{0.5cm}
+\noindent ROPgadget and ropper
+\begin{lstlisting}[numbers=none,frame=tb, language=bash]
+pip install ropgadget
+pip install ropper
+\end{lstlisting}
+\end{document}
